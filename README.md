@@ -2,7 +2,7 @@
 
 A lightweight and customizable **Kotlin Multiplatform (KMP)** library for integrating country selection into your Android and iOS apps. Includes core country data (dial code, currency, flag) and elegant UI components like dialogs and picker fields for effortless integration.
 
----
+
 
 ## ✨ Features
 
