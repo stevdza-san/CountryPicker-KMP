@@ -1,7 +1,12 @@
 # 🌍 Country Picker KMP Library
 
-A lightweight and customizable **Kotlin Multiplatform (KMP)** library for integrating country selection into your Android and iOS apps. Includes core country data (dial code, currency, flag) and elegant UI components like dialogs and picker fields for effortless integration.
+You've just started a new project and need to implement a feature that allows users to select a `country`, `phone number`, `dial code`, or `currency` and you're realizing it involves a lot of boilerplate: managing country data, handling `flags`, and building a clean UI. This library is built to solve exactly that. It provides a powerful yet simple `Country` enum class that includes all these information for you. But it doesn’t stop there. To make integration even better, the library includes two prebuilt UI components:
 
+  `CountryPickerDialog`: A searchable dialog that allows users to browse and select from a list of countries.
+
+  `CountryPickerField`: A UI component similar to a TextField that displays the currently selected country and opens the picker dialog on click.
+
+This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, and Kotlin/WASM targets.
 
 
 ## ✨ Features
