@@ -1,4 +1,6 @@
-# 🌍 Country Picker KMP Library
+<p align="center">
+  <H1>🌎 Country Picker KMP Library</H1>
+</p>
 
 <p align="center">
   <img src="ASSETS/components.png" href="">
