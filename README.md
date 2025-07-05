@@ -1,21 +1,86 @@
-This is a Kotlin Multiplatform project targeting Android, iOS, Web, Desktop.
+# 🌍 Country Picker KMP Library
 
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    `iosMain` would be the right folder for such calls.
+You've just started a new project and need to implement a feature that allows users to select a `country`, `phone number`, `dial code`, or `currency` and you're realizing it involves a lot of boilerplate: managing country data, handling `flags`, and building a clean UI. This library is built to solve exactly that. It provides a powerful yet simple `Country` enum class that includes all these information for you. But it doesn’t stop there. To make integration even better, the library includes two prebuilt UI components:
 
-* `/iosApp` contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform, 
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
+  `CountryPickerDialog`: A searchable dialog that allows users to browse and select from a list of countries.
+
+  `CountryPickerField`: A UI component similar to a TextField that displays the currently selected country and opens the picker dialog on click.
+
+This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, and Kotlin/WASM targets.
 
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html),
-[Compose Multiplatform](https://github.com/JetBrains/compose-multiplatform/#compose-multiplatform),
-[Kotlin/Wasm](https://kotl.in/wasm/)…
+## ✨ Features
 
-We would appreciate your feedback on Compose/Web and Kotlin/Wasm in the public Slack channel [#compose-web](https://slack-chats.kotlinlang.org/c/compose-web).
-If you face any issues, please report them on [YouTrack](https://youtrack.jetbrains.com/newIssue?project=CMP).
+- ✅ Predefined list of countries with:
+  - Name
+  - Dial code
+  - Currency
+  - Flag resource
+- ✅ Built-in `CountryPickerDialog` and `CountryPickerField` Composables
+- ✅ Real-time search support
+- ✅ Multiple display options: Dial Code, Currency, Name
+- ✅ Kotlin Multiplatform ready (Android, iOS, Desktop, WASM)
 
-You can open the web application by running the `:composeApp:wasmJsBrowserDevelopmentRun` Gradle task.
+
+
+### Gradle
+
+Make sure to include the library in your `commonMain` source set:
+
+```kotlin
+implementation("com.stevdza-san:countrypicker:1.0.0")
+```
+
+## Usage
+### Show Country Picker Dialog
+
+```kotlin
+var selectedCountry by remember { mutableStateOf(Country.Serbia) }
+var showDialog by remember { mutableStateOf(false) }
+
+AnimatedVisibility(visible = showDialog) {
+    CountryPickerDialog(
+        selectedCountry = selectedCountry,
+        onConfirmClick = { country ->
+            selectedCountry = country
+            showDialog = false
+        },
+        onDismiss = { showDialog = false }
+    )
+}
+
+CountryPickerField(
+    selectedCountry = selectedCountry,
+     onClick = { showDialog = true }
+)
+```
+
+## Display Options
+
+### Choose how to display the country label:
+
+```kotlin
+enum class CountryDisplayOption {
+    NAME,
+    CURRENCY,
+    DIAL_CODE,
+    DIAL_CODE_AND_NAME,
+    NAME_AND_CURRENCY
+}
+```
+
+### Data Model
+
+```kotlin
+enum class Country(
+    val dialCode: Int,
+    val currency: String,
+    val flag: DrawableResource
+)
+```
+
+### To get all available countries:
+
+```kotlin
+val allCountries = Country.entries
+```
