@@ -29,7 +29,7 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 Make sure to include the library in your `commonMain` source set:
 
 ```kotlin
-implementation("com.stevdza-san-countrypicker:1.0.0")
+implementation("com.stevdza-san:countrypicker:1.0.0")
 ```
 
 ## Usage
