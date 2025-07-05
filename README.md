@@ -26,12 +26,10 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 
 ### Gradle
 
-Make sure to include the library in your `shared` module (KMP common module):
+Make sure to include the library in your `commonMain` source set:
 
 ```kotlin
-dependencies {
-    implementation("com.stevdza-san-countrypicker:1.0.0")
-}
+implementation("com.stevdza-san-countrypicker:1.0.0")
 ```
 
 ## Usage
