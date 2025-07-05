@@ -21,7 +21,6 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 - ✅ Multiple display options: Dial Code, Currency, Name
 - ✅ Kotlin Multiplatform ready (Android, iOS, Desktop, WASM)
 
----
 
 
 ### Gradle
