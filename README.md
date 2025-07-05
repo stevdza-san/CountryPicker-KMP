@@ -1,5 +1,9 @@
 # 🌍 Country Picker KMP Library
 
+<p align="center">
+  <img src="ASSETS/components.png" href="">
+</p>
+
 You've just started a new project and need to implement a feature that allows users to select a `country`, `phone number`, `dial code`, or `currency` and you're realizing it involves a lot of boilerplate: managing country data, handling `flags`, and building a clean UI. This library is built to solve exactly that. It provides a powerful yet simple `Country` enum class that includes all these information for you. But it doesn’t stop there. To make integration even better, the library includes two prebuilt UI components:
 
   `CountryPickerDialog`: A searchable dialog that allows users to browse and select from a list of countries.
