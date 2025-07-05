@@ -35,14 +35,14 @@ implementation("com.stevdza-san:countrypicker:1.0.0")
 ### Show Country Picker Dialog
 
 ```kotlin
+var selectedCountry by remember { mutableStateOf(Country.Serbia) }
 var showDialog by remember { mutableStateOf(false) }
-var selectedCountry by remember { mutableStateOf(Country.Canada) }
 
-if (showDialog) {
+AnimatedVisibility(visible = showDialog) {
     CountryPickerDialog(
         selectedCountry = selectedCountry,
-        onConfirmClick = {
-            selectedCountry = it
+        onConfirmClick = { country ->
+            selectedCountry = country
             showDialog = false
         },
         onDismiss = { showDialog = false }
@@ -51,7 +51,7 @@ if (showDialog) {
 
 CountryPickerField(
     selectedCountry = selectedCountry,
-    onClick = { showDialog = true }
+     onClick = { showDialog = true }
 )
 ```
 
