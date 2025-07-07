@@ -105,7 +105,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "com.stevdza-san.countrypicker"
-            packageVersion = "1.0.0"
+            packageVersion = "1.0.1"
             description = "Country Picker KMP"
             copyright = "© 2025 Stevdza-San. All rights reserved."
         }
@@ -116,7 +116,7 @@ mavenPublishing {
     coordinates(
         groupId = "com.stevdza-san",
         artifactId = "countrypicker",
-        version = "1.0.0"
+        version = "1.0.1"
     )
 
     // Configure POM metadata for the published artifact

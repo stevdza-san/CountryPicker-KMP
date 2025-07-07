@@ -110,12 +110,20 @@ fun CountryPickerField(
                     "+${selectedCountry.dialCode}"
                 }
 
+                CountryDisplayOption.ISO_CODE -> {
+                    "+${selectedCountry.isoCode}"
+                }
+
                 CountryDisplayOption.DIAL_CODE_AND_NAME -> {
                     "(+${selectedCountry.dialCode}) ${selectedCountry.formatedName()}"
                 }
 
                 CountryDisplayOption.NAME_AND_CURRENCY -> {
                     "${selectedCountry.formatedName()} (${selectedCountry.currency})"
+                }
+
+                CountryDisplayOption.NAME_AND_ISO_CODE -> {
+                    "${selectedCountry.formatedName()} (${selectedCountry.isoCode})"
                 }
             },
             fontSize = MaterialTheme.typography.bodyMedium.fontSize,

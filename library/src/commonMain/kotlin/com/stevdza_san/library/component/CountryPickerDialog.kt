@@ -74,11 +74,11 @@ fun CountryPickerDialog(
     selectedCountry: Country,
     onConfirmClick: (Country) -> Unit,
     onDismiss: () -> Unit,
-    selectorSize: Dp = 18.dp,
-    selectorIconSize: Dp = 12.dp,
     primaryColor: Color = MaterialTheme.colorScheme.primary,
     containerColor: Color = MaterialTheme.colorScheme.surface,
     contentColor: Color = MaterialTheme.colorScheme.onSurface,
+    selectorSize: Dp = 18.dp,
+    selectorIconSize: Dp = 12.dp,
     selectorActiveColor: Color = MaterialTheme.colorScheme.primary,
     selectorInactiveColor: Color = MaterialTheme.colorScheme.outline.copy(0.1f),
     selectorIconColor: Color = MaterialTheme.colorScheme.onPrimary,
@@ -292,12 +292,20 @@ private fun CountryPicker(
                         "+${country.dialCode}"
                     }
 
+                    CountryDisplayOption.ISO_CODE -> {
+                        "+${country.isoCode}"
+                    }
+
                     CountryDisplayOption.DIAL_CODE_AND_NAME -> {
                         "(+${country.dialCode}) ${country.formatedName()}"
                     }
 
                     CountryDisplayOption.NAME_AND_CURRENCY -> {
                         "${country.formatedName()} (${country.currency})"
+                    }
+
+                    CountryDisplayOption.NAME_AND_ISO_CODE -> {
+                        "${country.formatedName()} (${country.isoCode})"
                     }
                 },
                 maxLines = 1,
