@@ -35,6 +35,15 @@ Make sure to include the library in your `commonMain` source set:
 implementation("com.stevdza-san:countrypicker:1.0.0")
 ```
 
+Or a version catalog (libs.versions.toml)
+```kotlin
+[versions]
+country-picker = "1.0.0"
+
+[libraries]
+country-picker-kmp = { module = "com.stevdza-san:countrypicker", version.ref = "country-picker" }
+```
+
 ## Usage
 ### Show Country Picker Dialog
 
