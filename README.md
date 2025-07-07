@@ -19,6 +19,7 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
   - Name
   - Dial code
   - Currency
+  - ISO code
   - Flag resource
 - ✅ Built-in `CountryPickerDialog` and `CountryPickerField` Composables
 - ✅ Real-time search support
@@ -32,13 +33,13 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 Make sure to include the library in your `commonMain` source set:
 
 ```kotlin
-implementation("com.stevdza-san:countrypicker:1.0.0")
+implementation("com.stevdza-san:countrypicker:1.0.1")
 ```
 
 Or a version catalog (libs.versions.toml)
 ```kotlin
 [versions]
-country-picker = "1.0.0"
+country-picker = "1.0.1"
 
 [libraries]
 country-picker-kmp = { module = "com.stevdza-san:countrypicker", version.ref = "country-picker" }
@@ -77,8 +78,10 @@ enum class CountryDisplayOption {
     NAME,
     CURRENCY,
     DIAL_CODE,
+    ISO_CODE,
     DIAL_CODE_AND_NAME,
-    NAME_AND_CURRENCY
+    NAME_AND_CURRENCY,
+    NAME_AND_ISO_CODE
 }
 ```
 
