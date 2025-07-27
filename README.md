@@ -10,7 +10,7 @@ You've just started a new project and need to implement a feature that allows us
 
   `CountryPickerField`: A UI component similar to a TextField that displays the currently selected country and opens the picker dialog on click.
 
-This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, and Kotlin/WASM targets.
+This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, Kotlin/JS and Kotlin/WASM targets.
 
 
 ## ✨ Features
