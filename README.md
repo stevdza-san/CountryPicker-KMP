@@ -10,7 +10,7 @@ You've just started a new project and need to implement a feature that allows us
 
   `CountryPickerField`: A UI component similar to a TextField that displays the currently selected country and opens the picker dialog on click.
 
-This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, and Kotlin/WASM targets.
+This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution designed to work seamlessly across Android, iOS, Desktop, Kotlin/JS and Kotlin/WASM targets.
 
 
 ## ✨ Features
@@ -33,13 +33,13 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 Make sure to include the library in your `commonMain` source set:
 
 ```kotlin
-implementation("com.stevdza-san:countrypicker:1.0.1")
+implementation("com.stevdza-san:countrypicker:1.0.4")
 ```
 
 Or a version catalog (libs.versions.toml)
 ```kotlin
 [versions]
-country-picker = "1.0.1"
+country-picker = "1.0.4"
 
 [libraries]
 country-picker-kmp = { module = "com.stevdza-san:countrypicker", version.ref = "country-picker" }
