@@ -91,7 +91,8 @@ enum class CountryDisplayOption {
 enum class Country(
     val dialCode: Int,
     val currency: String,
-    val flag: DrawableResource
+    val flag: DrawableResource,
+    val isoCode: String
 )
 ```
 
