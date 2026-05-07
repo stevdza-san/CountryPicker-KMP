@@ -33,13 +33,13 @@ This is a lightweight and fully customizable Kotlin Multiplatform (KMP) solution
 Make sure to include the library in your `commonMain` source set:
 
 ```kotlin
-implementation("com.stevdza-san:countrypicker:1.0.4")
+implementation("com.stevdza-san:countrypicker:1.0.5")
 ```
 
 Or a version catalog (libs.versions.toml)
 ```kotlin
 [versions]
-country-picker = "1.0.4"
+country-picker = "1.0.5"
 
 [libraries]
 country-picker-kmp = { module = "com.stevdza-san:countrypicker", version.ref = "country-picker" }
